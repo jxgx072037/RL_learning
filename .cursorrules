@@ -1,0 +1,40 @@
+{
+    "python.defaultInterpreterPath": "./env/Scripts/python.exe",
+    "python.terminal.activateEnvironment": true,
+    "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    "python.terminal.activateEnvInCurrentTerminal": true,
+    
+    "notes.imageProcessing": {
+        "enabled": true,
+        "tool": "cursorTools/image_to_notes.py",
+        "workflow": {
+            "onImageUpload": {
+                "action": "processAndSummarize",
+                "steps": [
+                    "运行OCR识别工具处理上传的图片",
+                    "总结识别的文本内容",
+                    "将总结内容添加到reinforcement_learning_notes.md的对应位置"
+                ]
+            },
+            "commands": {
+                "processImage": "python cursorTools/image_to_notes.py",
+                "updateNotes": "将OCR结果添加到笔记中"
+            }
+        },
+        "outputFormat": {
+            "includeOriginal": true,
+            "includeSummary": true,
+            "markdownFormatting": true
+        }
+    },
+    
+    "notes.behavior": {
+        "autoSave": false,
+        "triggerKeywords": ["记笔记", "记一下", "添加到笔记", "写到笔记里"],
+        "defaultNotesFile": "reinforcement_learning_notes.md",
+        "rules": {
+            "onlyUpdateOnTrigger": true,
+            "confirmBeforeUpdate": true
+        }
+    }
+} 

@@ -1,0 +1,8 @@
+ai2thor==5.0.0
+matplotlib==3.8.2
+gymnasium==1.0.0
+numpy==1.26.3
+pygame==2.5.2
+ale-py==0.9.0
+autorom==0.6.1
+AutoROM.accept-rom-license==0.6.1 
