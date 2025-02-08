@@ -4,6 +4,41 @@
     "terminal.integrated.defaultProfile.windows": "Command Prompt",
     "python.terminal.activateEnvInCurrentTerminal": true,
     
+    "python.environment": {
+        "virtualenv": {
+            "path": "./env",
+            "requirements": "requirements.txt",
+            "rules": {
+                "installInVirtualEnv": true,
+                "activateBeforeInstall": true,
+                "updateRequirements": true
+            }
+        }
+    },
+    
+    "jupyter.notebook": {
+        "useInternalViewer": true,
+        "defaultKernelName": "rl_env",
+        "kernelspec": {
+            "name": "rl_env",
+            "display_name": "Python (RL)",
+            "language": "python"
+        },
+        "serverSettings": {
+            "baseUrl": "http://localhost:8888",
+            "token": "",
+            "allowOrigin": "*"
+        },
+        "cellExecution": {
+            "enableAutoMoveToNextCell": true,
+            "showExecutionTime": true
+        },
+        "theme": {
+            "enabled": true,
+            "name": "JupyterLab Light"
+        }
+    },
+    
     "notes.imageProcessing": {
         "enabled": true,
         "tool": "cursorTools/image_to_notes.py",
@@ -35,6 +70,22 @@
         "rules": {
             "onlyUpdateOnTrigger": true,
             "confirmBeforeUpdate": true
+        }
+    },
+
+    "git.config": {
+        "repository": {
+            "url": "https://github.com/jxgx072037/RL_learning.git",
+            "type": "https",
+            "branch": "main"
+        },
+        "pushMethod": "https",
+        "commands": {
+            "push": "git push origin main",
+            "pull": "git pull origin main",
+            "status": "git status",
+            "add": "git add .",
+            "commit": "git commit -m"
         }
     }
 } 
