@@ -36,6 +36,15 @@
         "theme": {
             "enabled": true,
             "name": "JupyterLab Light"
+        },
+        "creation": {
+            "method": "script",
+            "scriptPath": "create_notebook.py",
+            "rules": {
+                "useScriptOnly": true,
+                "enforceStructure": true,
+                "description": "所有新的Jupyter notebook必须通过create_notebook.py创建，以确保统一的结构和格式"
+            }
         }
     },
     
